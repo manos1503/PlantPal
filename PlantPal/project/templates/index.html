@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Gardening Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <h2>PlantPal</h2>
+        </div>
+        <div class="sensor-display">
+            <div class="circle">
+                <div class="sensor-value" id="temperature-value">--</div>
+                <div class="status" id="temperature-status">Temperature</div>
+            </div>
+            <div class="circle">
+                <div class="sensor-value" id="humidity-value">--</div>
+                <div class="status" id="humidity-status">Soil Humidity</div>
+            </div>
+            <div class="circle">
+                <div class="sensor-value" id="light-value">--</div>
+                <div class="status" id="light-status">Sunlight</div>
+            </div>
+        </div>
+        <div class="recommendations">
+            <h3>Recommendations</h3>
+            <p id="recommendation-text">Fetching recommendations...</p>
+            <div class="loading-spinner" id="loading-spinner" style="display: none;"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
